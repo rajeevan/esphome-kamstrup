@@ -1,13 +1,7 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import i2c
-from esphome.const import (
-    CONF_ADDRESS,
-    CONF_COMMAND,
-    CONF_ID,
-    CONF_DURATION,
-    CONF_VOLUME,
-)
+from esphome.const import CONF_ADDRESS, CONF_COMMAND, CONF_ID, CONF_DURATION
 from esphome import automation
 from esphome.automation import maybe_simple_id
 
@@ -15,6 +9,7 @@ CODEOWNERS = ["@carlos-sarmiento"]
 DEPENDENCIES = ["i2c"]
 MULTI_CONF = True
 
+CONF_VOLUME = "volume"
 CONF_VOLUME_PER_MINUTE = "volume_per_minute"
 
 ezo_pmp_ns = cg.esphome_ns.namespace("ezo_pmp")
