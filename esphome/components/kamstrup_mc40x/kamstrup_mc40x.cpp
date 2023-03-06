@@ -62,9 +62,8 @@ void KamstrupMC40xComponent::send_command_(uint16_t command) {
 
   this->clear_uart_rx_buffer_();
   this->send_message_(msg, msg_len);
-  delay(2);
   this->read_command_(command);
-  delay(5);
+  delay(10);
 }
 
 void KamstrupMC40xComponent::send_message_(const uint8_t *msg, int msg_len) {
