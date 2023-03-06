@@ -111,7 +111,7 @@ void KamstrupMC40xComponent::read_command_(uint16_t command) {
   uint8_t buffer[20] = {0};
   int buffer_len = 0;
   int data;
-  int timeout = 250;  // ms
+  int timeout = 500;  // ms
 
   // Read the data from the UART
   while (timeout > 0) {
